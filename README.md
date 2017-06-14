@@ -30,7 +30,7 @@ The logback pattern is:
 
 Note:
 
-This works in every Spring application, it doesn't have to be be spring-boot.
+This works in every Spring application, it doesn't have to be spring-boot.
 
 More info:
 
