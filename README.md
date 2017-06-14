@@ -5,6 +5,7 @@ Distributed tracing demo for Spring applications using Brave and Zipkin.
 How to build
 
     $ git clone https://github.com/ervis/distributed-tracing-demo
+    $ cd distributed-tracing-demo
     $ ./run-zipkin.sh
 
     $ ./mvnw clean package
