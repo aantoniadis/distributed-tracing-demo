@@ -8,18 +8,15 @@ How to build
     $ cd distributed-tracing-demo
     $ ./run-zipkin.sh
 
-    $ ./mvnw clean package
-    $ java -jar target/demo-0.0.1-SNAPSHOT.jar
+`cd` in every project and run:
 
-    $ cd demo1
     $ ./mvnw clean package
-    $ java -jar target/demo1-0.0.1-SNAPSHOT.jar
 
-    $ cd demo2
-    $ ./mvnw clean package
-    $ java -jar target/demo2-0.0.1-SNAPSHOT.jar
+Start the servers:
 
-    $ git clone https://github.com/ervis/dockerfiles
+    $ java -jar demo/target/demo-0.0.1-SNAPSHOT.jar
+    $ java -jar demo1/target/demo1-0.0.1-SNAPSHOT.jar
+    $ java -jar demo2/target/demo2-0.0.1-SNAPSHOT.jar
 
 Go to to `http://localhost:8080` to trigger a request.
 
