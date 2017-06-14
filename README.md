@@ -26,6 +26,10 @@ Check the console logs or go to zipkin (http://localhost:9411) to view the trace
 
 Check that the same trace id is generated in every console.
 
+The logback pattern is:
+
+    "%d [%X{traceId}/%X{spanId}] [%thread] %-5level %logger{36} - %msg%n"
+
 Note:
 
 This works in every Spring application, it doesn't have to be be spring-boot.
