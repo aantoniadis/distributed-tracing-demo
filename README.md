@@ -16,13 +16,13 @@ How to build
     $ ./mvnw clean package
     $ java -jar target/demo2-0.0.1-SNAPSHOT.jar
 
-    $ git clone https://github.com/ervis/dockerfile
+    $ git clone https://github.com/ervis/dockerfiles
     $ cd dockerfiles/openzipkin/
     $ docker-compose -f zipkin.yml up -d
 
 Go to to `http://localhost:8080` to trigger a request.
 
-Check the console logs or go to zipkin (http://localhost:9411) to view the trace.
+Check the console logs or go to zipkin (http://localhost:9411) to view the trace and check information about the HTTP requests.
 
 Check that the same trace id is generated in every console.
 
