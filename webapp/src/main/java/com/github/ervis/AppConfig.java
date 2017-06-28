@@ -84,25 +84,13 @@ public class AppConfig {
     return new FitFilter(clientHttpRequestInterceptor, template);
   }
 
-  @Bean
-  FailureServiceClient failureServiceClient(@Value("${wiremock.url}") String wiremockUrl) {
-    return new FailureServiceClient(wiremockUrl, new RestTemplate());
-  }
-
-  @Bean
-  FailureInjectionPointInterceptor failureInjectionPointInterceptor(Tracing tracing,
-      FailureServiceClient client) {
-    return new FailureInjectionPointInterceptor(tracing, client);
-  }
-
   // Register MVC interceptor
   @Bean
   RequestMappingHandlerMapping requestMappingHandlerMapping(
-      AsyncHandlerInterceptor mvcInterceptor,
-      FailureInjectionPointInterceptor failureInjectionPointInterceptor) {
+      AsyncHandlerInterceptor mvcInterceptor) {
 
     RequestMappingHandlerMapping r = new RequestMappingHandlerMapping();
-    r.setInterceptors(mvcInterceptor, failureInjectionPointInterceptor);
+    r.setInterceptors(mvcInterceptor);
 
     return r;
   }

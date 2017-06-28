@@ -1,4 +1,4 @@
-rootProject.name = 'failit-demo'
+rootProject.name = 'distributed-tracing-demo'
 include 'webapp'
 include 'web-service-1'
 include 'web-service-2'
