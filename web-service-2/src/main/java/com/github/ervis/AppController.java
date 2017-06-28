@@ -1,5 +1,6 @@
 package com.github.ervis;
 
+import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,19 +20,8 @@ public class AppController {
 
   @GetMapping("/")
   public String hello() {
-    LOG.info("Server ({}) api:/ responded", serverName);
-    return "Hello World";
-  }
-
-  @GetMapping("/name")
-  public String name() {
-    LOG.info("Server ({}) api:/name responded", serverName);
-    return serverName;
-  }
-
-  @GetMapping("/completable")
-  public String completable() {
-    LOG.info("Server ({}) api:/completable responded", serverName);
-    return "yo!";
+    String random = String.valueOf(new Random().nextInt(1000000));
+    LOG.info("Generated response: {}", random);
+    return random;
   }
 }

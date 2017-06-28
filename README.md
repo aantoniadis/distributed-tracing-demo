@@ -2,10 +2,18 @@
 
 Distributed tracing demo for Spring applications using Brave and Zipkin.
 
+Installation:
+
+You need to [docker](https://www.docker.com) and [docker-compose](https://github.com/docker/compose)
+in order to run Zipkin.
+
+
 How to build
 
     $ git clone https://github.com/ervis/distributed-tracing-demo
     $ cd distributed-tracing-demo
+    
+    # run Zipkin
     $ docker-compose up -d
 
 Build the projects:
