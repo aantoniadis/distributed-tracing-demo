@@ -1,0 +1,15 @@
+
+
+projects.each {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    group 'com.github.ervis'
+    version '1.0-SNAPSHOT'
+
+    ext {
+        braveVersion = '4.3.3'
+    }
+}

@@ -10,13 +10,13 @@ How to build
 
 `cd` in every project and run:
 
-    $ ./mvnw clean package
+    $ ./gradlew clean build
 
 Start the servers:
 
-    $ java -jar demo/target/demo-0.0.1-SNAPSHOT.jar
-    $ java -jar demo1/target/demo1-0.0.1-SNAPSHOT.jar
-    $ java -jar demo2/target/demo2-0.0.1-SNAPSHOT.jar
+    $ java -jar webapp/build/libs/webapp.jar
+    $ java -jar web-service-1/build/libs/web-service-1.jar
+    $ java -jar web-service-2/build/libs/web-service-2.jar
 
 Go to to `http://localhost:8080` to trigger a request.
 
@@ -30,7 +30,7 @@ The logback pattern is:
 
 Note:
 
-This works in every Spring application, it doesn't have to be spring-boot.
+This works in every Spring application, it does not have to be spring-boot.
 
 More info:
 

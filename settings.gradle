@@ -1,0 +1,5 @@
+rootProject.name = 'failit-demo'
+include 'webapp'
+include 'web-service-1'
+include 'web-service-2'
+
