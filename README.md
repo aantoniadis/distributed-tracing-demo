@@ -8,7 +8,7 @@ How to build
     $ cd distributed-tracing-demo
     $ ./run-zipkin.sh
 
-`cd` in every project and run:
+Build the projects:
 
     $ ./gradlew clean build
 
@@ -20,6 +20,12 @@ Start the servers:
 
 Go to to `http://localhost:8080` to trigger a request.
 
+The following chain of calls is made.
+
+``
+webapp --> web-service-1 --> web-service-2
+``
+
 Check the console logs or go to zipkin (http://localhost:9411) to view the trace and check information about the HTTP requests.
 
 Check that the same trace id is generated in every console.
@@ -30,7 +36,7 @@ The logback pattern is:
 
 Note:
 
-This works in every Spring application, it does not have to be spring-boot.
+This works on every Spring application, it does not have to be spring-boot.
 
 More info:
 
