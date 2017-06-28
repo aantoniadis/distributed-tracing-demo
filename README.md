@@ -6,7 +6,7 @@ How to build
 
     $ git clone https://github.com/ervis/distributed-tracing-demo
     $ cd distributed-tracing-demo
-    $ ./run-zipkin.sh
+    $ docker-compose up -d
 
 Build the projects:
 

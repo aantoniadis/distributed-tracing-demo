@@ -1,11 +1,9 @@
-#!/bin/bash
-# Runs zipkin wiht mysql
-cat << EOF > /tmp/zipkin.yml
 version: '3'
 
 services:
   storage:
     image: openzipkin/zipkin-mysql
+    container_name: mysql
     ports:
       - 3306:3306
   server:
@@ -17,6 +15,3 @@ services:
       - 9411:9411
     depends_on:
       - storage
-EOF
-
-docker-compose -f /tmp/zipkin.yml up -d
